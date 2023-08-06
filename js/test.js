@@ -1,7 +1,7 @@
 var params = JSON.parse(localStorage.getItem('oauth2-test-params'));
 $.ajax({
 
-    url : 'https://inventory-service-l7id2vv4oq-ue.a.run.app/data?access_token=' + params['access_token'],
+    url : 'https://inventory-service-l7id2vv4oq-ue.a.run.app/data',
     type : 'POST',
     data : {
         'account_id' : window.user['id'],
@@ -10,7 +10,8 @@ $.ajax({
     },
     "headers": {
         "accept": "application/json",
-        "Access-Control-Allow-Origin":"*"
+        "Access-Control-Allow-Origin":"*",
+        "authorization": "Bearer " + params['access_token'],
     },
     "crossDomain": true,
     dataType:'json',
