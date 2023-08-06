@@ -14,6 +14,8 @@ if (window.user) {
             "accept": "application/json",
             "Access-Control-Allow-Origin":"*",
             "authorization": "Bearer " + params['access_token'],
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS"
         },
         crossDomain: true,
         dataType:'json',
