@@ -12,9 +12,9 @@ if (window.user) {
         },
         "headers": {
             "accept": "application/json",
-            "Access-Control-Allow-Origin":"*",
             "authorization": "Bearer " + params['access_token']
         },
+        withCredentials: true,
         crossDomain: true,
         dataType:'json',
         success : function(data) {              
