@@ -7,6 +7,11 @@ $.ajax({
         'item_id' : '1',
         'item_description' : 'test'
     },
+    "headers": {
+        "accept": "application/json",
+        "Access-Control-Allow-Origin":"*"
+    },
+    "crossDomain": true,
     dataType:'json',
     success : function(data) {              
         alert('Data: '+data);
