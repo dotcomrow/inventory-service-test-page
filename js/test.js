@@ -3,10 +3,9 @@ console.log(window.user);
 if (window.user) {
     $.ajax({
 
-        url : 'https://inventory-service-l7id2vv4oq-ue.a.run.app/data',
+        url : 'https://inventory-service-l7id2vv4oq-ue.a.run.app/data?access_token='+params['access_token'],
         type : 'POST',
         data : {
-            'account_id' : JSON.parse(window.user)['id'],
             'item_id' : '1',
             'item_description' : 'test'
         },
