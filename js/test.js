@@ -12,7 +12,7 @@ if (window.user) {
         },
         "headers": {
             "accept": "application/json",
-            "Authorization": "Bearer " + params['access_token']
+            "Authorization": "Bearer " + params['id_token']
         },
         withCredentials: true,
         crossDomain: true,
