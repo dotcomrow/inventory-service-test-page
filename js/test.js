@@ -5,7 +5,7 @@ $.ajax({
     url : 'https://inventory-service-l7id2vv4oq-ue.a.run.app/data',
     type : 'POST',
     data : {
-        'account_id' : window.user,
+        'account_id' : window.user['id'],
         'item_id' : '1',
         'item_description' : 'test'
     },
