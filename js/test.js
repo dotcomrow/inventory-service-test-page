@@ -1,10 +1,11 @@
 var params = JSON.parse(localStorage.getItem('oauth2-test-params'));
+console.log(window.user);
 $.ajax({
 
     url : 'https://inventory-service-l7id2vv4oq-ue.a.run.app/data',
     type : 'POST',
     data : {
-        'account_id' : window.user.id,
+        'account_id' : window.user,
         'item_id' : '1',
         'item_description' : 'test'
     },
