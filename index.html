@@ -32,7 +32,7 @@
                     'access_token=' + params['access_token']);
                 xhr.onreadystatechange = function (e) {
                     if (xhr.readyState === 4 && xhr.status === 200) {
-                        console.log(xhr.response);
+                        window.user = xhr.response;
                     } else if (xhr.readyState === 4 && xhr.status === 401) {
                         // Token invalid, so prompt for user permission.
                         oauth2SignIn();
@@ -82,6 +82,7 @@
     </script>
 
     <button onclick="trySampleRequest();">Try sample request</button>
+
 </body>
 
 </html>
