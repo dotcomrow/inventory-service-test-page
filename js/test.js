@@ -10,8 +10,7 @@ if (window.user) {
             'item_description' : 'test'
         },
         "headers": {
-            "accept": "application/json",
-            "Authorization": "Bearer " + params['id_token']
+            "accept": "application/json"
         },
         withCredentials: true,
         crossDomain: true,
