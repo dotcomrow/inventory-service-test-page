@@ -3,14 +3,15 @@ console.log(window.user);
 if (window.user) {
     $.ajax({
 
-        url : 'https://inventory-service-l7id2vv4oq-ue.a.run.app/data?access_token='+params['access_token'],
+        url : 'https://inventory-service-l7id2vv4oq-ue.a.run.app/data',
         type : 'POST',
         data : {
             'item_id' : '1',
             'item_description' : 'test'
         },
         "headers": {
-            "accept": "application/json"
+            "accept": "application/json",
+            "Authorization": "Bearer " + params['access_token'],
         },
         withCredentials: true,
         crossDomain: true,
